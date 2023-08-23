@@ -48,7 +48,7 @@ async def start(client, message):
         key, value = message.command[1].split('-', maxsplit=1)
 
         if key == 'pokemon':
-            is_expanded = False
+            is_expanded = True
             pokemon = pokemon_client().get_pokemon(value).pop()
             text = datapage.get_datapage_text(pokemon, is_expanded, is_shiny_setted(user_id))
             reply_markup = markup.datapage_markup(pokemon.name)
