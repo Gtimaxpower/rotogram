@@ -43,7 +43,7 @@ def get_move_page_text(move):
         'pp': move.pp,
         'description': data.get_english_effect(move.effect_entries),
         'generation': data.prettify_name(move.generation.name),
-        #'pokemon_list': data.get_pokemon_list_text(move.learned_by_pokemon),
+        'pokemon_list': data.get_pokemon_list_text(move.learned_by_pokemon),
         'type_emoji': const.TYPE_EMOJI[move.type.name],
         'move_emoji': const.GLOVE,
         'data_emoji': const.MOVE_DATA,
